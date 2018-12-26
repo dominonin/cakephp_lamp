@@ -1,0 +1,26 @@
+version: "3"
+services:
+  web:
+    image: occitech/cakephp:5-apache
+    links:
+        - db
+    depends_on:
+        - db
+    ports:
+        - "80:80"
+    volumes:
+        - "./src:/var/www/html"
+
+  db:
+    image: mariadb:latest
+    environment:
+        - MYSQL_ALLOW_EMPTY_PASSWORD=true
+    ports:
+        - "3306:3306"
+
+  phpmyadmin:
+    image: phpmyadmin/phpmyadmin
+    depends_on:
+        - db
+    ports:
+        - "8081:80"
