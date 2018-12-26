@@ -18,4 +18,8 @@ Open terminal or powershell if on windows and go to this directory, where the .y
 
 Execute 'docker-compose up' in the terminal.
 
+Web server is bound to host port 80, you can change this by changing the lefthand side of the colon for the web definition.
+PHPMyAdmin web interface is bound to 8081, you change this by changing the lefthand side of the colon for the phpmyadmin definition.
+By default there is no root password for mysql, you can change this under the db definition. 
+
 To exit, press Control + C on your keyboard when the terminal is focused.
