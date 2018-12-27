@@ -1,10 +1,10 @@
-# docker_lamp
-Docker Compose container with LAMP-like properties
+# cakephp_lamp
+Docker Compose container with LAMP-like properties for CakePHP use.
 Includes the following containers for LAMP like experience:
-- PHP 5.6.38
-- Apache server
-- PHPMyAdmin
-- MariaDB SQL Server
+- PHP 5.6.38 (occitech/cakephp container)
+- Apache server (occitech/cakephp container)
+- PHPMyAdmin (phpmyadmin container)
+- MariaDB SQL Server (mariadb container)
 - Composer installed in apache container
 - Bind mount with src directory for apache server
 
